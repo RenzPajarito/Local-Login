@@ -28,7 +28,7 @@ function submitForm(event) {
             loginSuccessful = true
             userName = userAccounts[i].name
         } else if (username === "" && password === "") {
-            log.innerText = "Please fill up the form!"
+            log.innerText = "Please fill out the form!"
         } else if (username === "" && password) {
             log.innerText = "Username or Email is Required!"
         } else if (username && password === "") {
