@@ -1,0 +1,171 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://images4.alphacoders.com/134/1347180.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#log {
+    color: rgb(255, 167, 52);
+}
+
+#form-container {
+    width: 320px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 8px 1px #eeeeee17;
+    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#form-container .image-logo {
+    width: 100px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px #fff;
+}
+
+#form-container .name-logo {
+    color: #eee;
+    margin-bottom: 35px;
+}
+
+#form-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#form-container label {
+    width: 90%;
+    color: #eee;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    font-size: 0.8em;
+}
+
+input {
+    width: 85%;
+    padding: 10px 12px;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    background: transparent;
+    color: #eee;
+}
+
+input#username, #password {
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: #eeeeee8a;
+    text-transform: capitalize;
+}
+
+#form-container button {
+    text-transform: uppercase;
+    cursor: pointer;
+    background: rgb(255 83 128 / 20%);
+    transition: ease-in-out 0.2s;
+    border: 1px solid #eee;
+    outline: none;
+    padding: 10px 20px;
+    background: transparent;
+    color: #eee;
+    border-radius: 20px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(https://images4.alphacoders.com/134/1347180.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #eee;
+    z-index: 2;
+}
+
+main header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none;
+    font-size: 0.9em;
+}
+
+header .logo img {
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+header .profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    margin-right: 30px;
+    font-size: 1.2em;
+}
+
+header .profile button {
+    outline: none;
+    border: 1px solid #eee;
+    color: #eee;
+    padding: 5px 12px;
+    background: transparent;
+    border-radius: 20px;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+header .profile button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+    main header {height: 60px;}
+    main header .logo {width: 110px;}
+    main header .logo img {width: 40px;}
+    main header h1 {display: none;}
+    main header .profile {font-size: 16px;}
+}

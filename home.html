@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="logo">
+                <img src="https://ideogram.ai/assets/image/lossless/response/OM5wa4l7SWmrbJVkJZszDQ" class="image-logo">
+                <h1 class="name-logo">Zern Code</h1>
+            </div>
+            <div class="profile">
+                <p id="get-username">Welcome</p>
+                <p>|</p>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+    </main>
+
+    <script>
+        window.addEventListener("load", function() {
+            const userName = localStorage.getItem("name")
+            if (userName) {
+                document.getElementById("get-username").textContent = userName
+            } else {
+                window.location.href = "index.html"
+            }
+        })
+
+        function logout() {
+            window.location.href = "index.html"
+        }
+    </script>
+</body>
+</html>
